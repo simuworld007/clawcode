@@ -1,0 +1,26 @@
+# Todo CLI
+
+A small example Python project: a command-line todo app that stores tasks in a JSON file.
+
+Structure:
+- src/: package code
+- tests/: unit tests
+- docs/: short usage guide
+- env/: virtualenv instructions / requirements
+
+Features:
+- Add, list, complete, and remove tasks
+- Persistent storage in `~/.todo_cli/tasks.json`
+- Simple tests with pytest
+
+Run:
+
+1. Create virtual environment:
+   python -m venv .venv
+   source .venv/bin/activate
+2. Install dependencies:
+   pip install -r env/requirements.txt
+3. Run CLI:
+   python -m todo_cli.main add "Buy milk"
+   python -m todo_cli.main list
+
