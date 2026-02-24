@@ -1,5 +1,5 @@
 import argparse
-from .storage import load_tasks, save_tasks
+from .storage import load_tasks, save_tasks, get_storage_location
 
 
 def add_task(description):
@@ -40,6 +40,11 @@ def remove_task(task_id):
     print('Removed task', task_id)
 
 
+def show_location():
+    location = get_storage_location()
+    print('Tasks are stored in:', location)
+
+
 def parse_args():
     p = argparse.ArgumentParser(prog='todo')
     sub = p.add_subparsers(dest='cmd')
@@ -56,6 +61,8 @@ def parse_args():
     r = sub.add_parser('remove')
     r.add_argument('id', type=int)
 
+    sub.add_parser('location', help='Show storage file location')
+
     return p.parse_args()
 
 
@@ -69,6 +76,8 @@ def main():
         complete_task(args.id)
     elif args.cmd == 'remove':
         remove_task(args.id)
+    elif args.cmd == 'location':
+        show_location()
 
 
 if __name__ == '__main__':

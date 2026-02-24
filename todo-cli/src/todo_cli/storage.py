@@ -15,3 +15,8 @@ def save_tasks(tasks, path: Path = DEFAULT_PATH):
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open('w', encoding='utf-8') as f:
         json.dump(tasks, f, ensure_ascii=False, indent=2)
+
+
+def get_storage_location(path: Path = DEFAULT_PATH):
+    """Return the absolute path of the tasks storage file."""
+    return str(path.resolve())
