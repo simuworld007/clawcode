@@ -1,5 +1,5 @@
 import argparse
-from .storage import load_tasks, save_tasks, get_storage_location
+from todo_cli.storage import load_tasks, save_tasks, get_storage_location
 
 
 def add_task(description):
