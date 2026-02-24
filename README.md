@@ -1,4 +1,4 @@
-[![CI](https://github.com/simuworld007/clawcode/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/simuworld007/clawcode/actions/workflows/ci.yml)
+[![CI](https://github.com/simuworld007/clawcode/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/simuworld007/clawcode/actions/workflows/ci.yml) [![Codespaces](https://img.shields.io/badge/Codespaces-ready-blue?logo=github)](https://github.com/simuworld007/clawcode/codespaces)
 
 # ClawCode — Projects
 
@@ -21,6 +21,12 @@ Quick start
    pip install -e .
    python -m todo_cli.main add "Buy milk"
 
+Run in GitHub Codespaces
+
+- Open this repository in Codespaces: https://github.com/simuworld007/clawcode/codespaces
+- Or from the repo page: Code → Codespaces → Create codespace on main
+- The repository includes a `.devcontainer` configuration that prepares a Python 3.11 container, creates a `.venv`, installs the package in editable mode and test dependencies.
+
 Development
 
 - Tests are run from the repository root: `pytest -q` (CI runs pytest across projects).
@@ -29,6 +35,11 @@ Development
 Contributing
 
 - Open a PR against main. CI will run tests automatically.
+
+Badges and links
+
+- CI badge shows workflow status. Click it to view the latest run.
+- Codespaces link opens the Codespaces panel for this repository.
 
 License
 
